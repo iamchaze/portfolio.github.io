@@ -590,6 +590,9 @@ small.active{
   .contactMeModal{
     top: 350%;
   }
+  .about-heading{
+    margin: 7%
+  }
 }
 
 /* End of Home Page */
