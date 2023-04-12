@@ -1,0 +1,680 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+body {
+  background-color: #7ce0e7;
+  color: black;
+  
+  
+}
+
+/* Home Page */
+
+/* #7ce0e7; */
+a {
+  text-decoration: none;
+  position: relative;
+}
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.breakline {
+  border-top: 0.5vh solid black;
+  width: 30%;
+  display: block;
+  margin: auto;
+  margin-top: 8%;
+  text-align: center;
+}
+.main-page-breakline{
+    border-top: 0.5vh solid black;
+    width: 30%;
+    display: block;
+    margin: auto;
+    margin-top: 0%;
+    text-align: center;
+}
+.contact-me-breakline{
+  border-top: 0.5vh solid black;
+  width: 30%;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  text-align: center;
+}
+
+@keyframes bouncy-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media (min-width: 100px) and (max-width: 767px){
+  .customModal.active{
+    position: absolute;
+    top: 200%;
+  }
+}
+/* social links section*/
+
+.social-links-section {
+  width: 12vh;
+  height: 100vh;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  margin: auto;
+  
+}
+.social-icons {
+  box-shadow: 0.5vh 0.5vh 0.1px rgba(0, 0, 0, 0.9);
+  border: 4px black solid;
+  border-radius: 1.5vh;
+  padding: 0.5vh;
+  background-color: #7ce0e7;
+}
+.fa-linkedin,
+.fa-instagram {
+  font-size: 5.5vh;
+}
+.links {
+  display: block;
+  text-align: center;
+  font-size: 5vh;
+  color: black;
+  margin-top: 3vh;
+}
+.links:hover {
+  scale: 110%;
+  box-shadow: none;
+  animation: bouncy-rotate 0.3s;
+  color: black;
+}
+.social-icons:hover {
+  background-color: gold;
+}
+.social-icons:active {
+  scale: 90%;
+  box-shadow: none;
+}
+.social-icons:hover .link-tooltip {
+  visibility: visible;
+}
+
+.line {
+  border-left: solid 0.5vh black;
+  height: 100%;
+  display: inline-block;
+  margin-left: 48%;
+  margin-top: 20%;
+}
+/* Navigation Bar */
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.5%;
+}
+.navbar-btn {
+  font-family: "carter one";
+  border: none;
+  border-radius: 1.8vh;
+  background-color: transparent;
+  font-weight: bolder;
+  font-size: 3vh;
+  padding: 0.5% 1%;
+  transition: color 0.1s;
+}
+.navbar-btn:hover {
+  color: beige;
+}
+
+.hire-me-btn {
+  position: fixed;
+  right: 3vh;
+  font-family: "carter one";
+  border: 0.5vh solid black;
+  border-radius: 1.8vh;
+  background-color: gold;
+  font-weight: bolder;
+  font-size: 3vh;
+  padding: 0.5% 1%;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 1);
+  transition: scale 0.01s;
+  transition: color 0.05s;
+  transition: padding 0.01s;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+.hire-me-btn .button{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+.hire-me-btn:hover {
+  scale: 110%;
+  padding-left: 1%;
+
+}
+.hire-me-btn:active {
+  scale: 100%;
+  box-shadow: none;
+  color: beige;
+}
+.hire-me-btn .content{
+    opacity: 0;
+}
+.hire-me-btn:hover::before{
+    content: "😍  ";
+  
+}
+
+/* main content */
+
+.main-content {
+  margin: 6.5%;
+  margin-bottom: 4%;
+}
+
+.profile-image {
+  width: 80%;
+  display: block;
+  margin: auto;
+  border: 1.8vh solid #51d3da;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 1.6vh 1.6vh 0 rgba(0, 0, 0, 1);
+  transition: transform 0.5s;
+  transition-delay: 0.2s;
+}
+.profile-image:hover{
+    transform: rotateY(180deg);
+    box-shadow: 1.6vh 1.6vh 20px rgba(0, 0, 0, 1);
+    background-image: url("../assets/images/DSC_0600-01.jpeg");
+}
+
+.intro-section {
+  text-align: center;
+}
+.introduction {
+  display: block;
+  margin-top: 10%;
+  text-align: center;
+  font-family: "Vampiro One";
+  font-weight: bolder;
+  font-size: 15vh;
+  color: black;
+}
+.subtitle {
+  margin-top: 5%;
+  font-family: "Press start 2p";
+  font-weight: bold;
+  font-size: 3vh;
+}
+.luffy{
+    width: 5vh;
+    margin: 0;
+    padding: 0;
+}
+.gif-section{
+    width: 30%;
+    margin: auto;
+}
+
+/* About me section */
+.about-heading {
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  font-family: "carter one";
+  font-size: 5vh;
+}
+.about-subtitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  font-weight: 700;
+  font-size: 4vh;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.cards {
+  width: 60%;
+  height: 50vh;
+  margin: auto;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+.single-card {
+  width: 90%;
+  height: 40vh;
+  background-color: rgb(226, 133, 99);
+  margin: auto;
+  margin-bottom: 10%;
+  border: 10px solid black;
+  border-radius: 3.6vh;
+  box-shadow: 1.6vh 1.6vh 0 rgba(0, 0, 0, 1);
+  transition: box-shadow 0.1s;
+  transition: 200ms ease-in-out;
+  
+}
+.single-card:hover{
+    scale: 102%;
+    cursor: pointer;
+    color: beige;
+}
+.single-card:active{
+  scale: 95%;
+  box-shadow: none;
+}
+.aboutme-icon {
+  font-size: 18vh;
+  float: center;
+  margin-top: 10%;
+}
+
+.card-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card-desc {
+  margin: auto;
+  text-align: center;
+  margin-top: 20%;
+}
+.aboutme-desc {
+  font-size: 4vh;
+  font-family: "changa one";
+}
+.card-anchor{
+  color: black;
+}
+.card-anchor:hover{
+  text-decoration: none;
+}
+
+.myself-img{
+  width: 20vh;
+  height: 20vh;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  border: 0.3 vh solid black;
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 1);
+  border-radius: 50vh;
+  margin-bottom: 5%;
+}
+
+/* Contact Form */
+
+.contact-form {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border: 0.5vh solid black;
+  padding: 2%;
+  border-radius: 1.2vh;
+  transition: scale 0.1s;
+  box-shadow: 1.6vh 1.6vh 0 rgba(0, 0, 0, 1);
+}
+.contact-form:hover {
+  scale: 105%;
+}
+.form-attr {
+  width: 49%;
+}
+.comment-attr {
+  width: 98.3%;
+}
+.form-attr,
+.comment-attr {
+  display: inline-block;
+}
+
+.form-label {
+  margin-left: 5.5%;
+}
+.comment-label {
+  margin-left: 3%;
+}
+.form-label,
+.comment-label {
+  display: block;
+  text-align: start;
+  font-family: "changa one";
+  font-size: 2.2vh;
+  margin-top: 2%;
+}
+.form-field {
+  width: 90%;
+}
+.comments-field {
+  width: 95.3%;
+}
+.form-field,
+.comments-field {
+  padding: 3% 3.5%;
+  border: 0.4vh solid black;
+  margin: 1%;
+  border-radius: 1.2vh;
+  background-color: rgb(255, 250, 243);
+  font-size: 2.5vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#submit-btn{
+    font-family: "carter one";
+    border: 0.5vh solid black;
+    border-radius: 2vh;
+    background-color: gold;
+    font-weight: bolder;
+    font-size: 3vh;
+    padding: 0.5% 1%;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 1);
+    transition:  0.1s;
+}
+#submit-btn:hover{
+    scale: 110%;
+}
+#submit-btn:active{
+  scale: 95%;
+}
+
+.copyright{
+    text-align: center;
+    margin: auto;
+    margin-top: 1%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+small{
+  display: block;
+  font-weight: bold;
+  text-align: start;
+  margin-left: 10%;
+  font-size: 2vh;
+  color: rgb(206, 6, 6);
+  visibility: hidden;
+
+}
+small::before{
+  content: '* ';
+}
+small.active{
+  visibility: visible;
+}
+/* Modals */
+#overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+#overlay.active{
+  pointer-events: all;
+  opacity: 1;
+}
+.customModal{
+  background-color: antiquewhite;
+  width: 700px;
+  max-width: 70%;
+  border: 0.4vh solid black;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 10;
+  border-radius: 1.5vh;
+  transition: 200ms ease-in-out;
+  box-shadow: 1vh 1vh 0 rgba(0, 0, 0, 1);
+  
+}
+.customModal.active{
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+
+.customModal .modalHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5vh solid black;
+  padding: 1% 5%;
+  font-family: "carter one";
+  
+}
+.closeBtn, .contactMeModalcloseBtn{
+  font-size: 5vh;
+}
+.closeBtn:hover, .contactMeModalcloseBtn:hover{
+  cursor: pointer;
+}
+.modalBody{
+  padding: 3%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.5vh;
+}
+
+.contactMeModal{
+  background-color: antiquewhite;
+  width: 700px;
+  max-width: 70%;
+  border: 0.4vh solid black;
+  position: absolute;
+  top: 250%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 10;
+  border-radius: 1.5vh;
+  transition: 200ms ease-in-out;
+  box-shadow: 1vh 1vh 0 rgba(0, 0, 0, 1);
+}
+.contactMeModal .modalHeader{
+  border-bottom: 0.5vh solid black;
+  padding: 1% 5%;
+  font-family: "carter one";
+  
+}
+.contactMeModalcloseBtn{
+  display: block;
+  text-align: end;
+}
+.contactMeModal.active{
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+/* Media Queries */
+
+@media (min-width: 768px) and (max-width: 2000px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .navbar-btn {
+    margin-top: 0;
+  }
+}
+/* Long Mobile Size */
+@media (min-height: 680px) and (max-height: 950px) and (max-width:1000px) {
+  .contact-me-breakline{
+    margin-top: 185%;
+  }
+  .aboutme-icon{
+    font-size: 16vh;
+    margin-top: 15%;
+  }
+}
+/* Mobile Size */
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .navbar-btn {
+    margin-top: 16%;
+  }
+  .hire-me-btn {
+    margin-top: 2%;
+  
+  }
+  .social-links-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 30%;
+    margin: auto;
+  
+  }
+  .line {
+    visibility: collapse;
+  }
+  .cards {
+    margin-top: 15%;
+  }
+  .contact-me-section {
+    margin-top: 150%;
+  }
+  .main-page-breakline, .contact-me-breakline{
+    width: 95%;
+  }
+  .gif-section{
+    width: 95%;
+  }
+  .about-subtitle{
+    font-size: 3vh;
+  } 
+  .form-attr{
+    width: 98%;
+  }
+  .comment-attr{
+    width: 94%;
+    margin-bottom: 10%;
+  }
+  #submit-btn{
+    margin-bottom: 10%;
+  }
+  .introduction{
+    font-size: 13vh;
+  }
+  .contactMeModal{
+    top: 350%;
+  }
+}
+
+/* End of Home Page */
+
+/* My skills Page */
+
+.main-div{
+  text-align: center;
+}
+.main-div .heading{
+  margin: 4% auto 0 auto;
+  font-family: 'Cabin', sans-serif;
+  font-weight: bold;
+}
+.skill{
+  display: inline-block;
+  width: 35vh;
+  height: 35vh;
+  margin: 5vh;
+  border: 1vh solid black;
+  border-radius: 5vh;
+  box-shadow: 1vh 1vh 0 rgba(0, 0, 0, 1);
+  transition: 200ms ease-in-out;
+}
+.main-div .html{
+  color: #e15638;
+}
+.main-div .css{
+  color: #3598d7;
+}
+.main-div .js{
+  color: #edda64;
+}
+.main-div .bootstrap{
+  color: #6a2eaf;
+}
+.main-div .angular{
+  color: #c80036;
+}
+.main-div .sql{
+  color: rgb(112, 112, 112);
+}
+.skill .img{
+  font-size: 20vh;
+  margin: 0;
+  padding: 0;
+}
+.skill:hover{
+  scale: 110%;
+}
+.skill .name{
+  font-size: 4vh;
+  font-family: monospace;
+  margin-top: -12%;
+
+}
+
+
+@media (min-width: 100px) and (max-width: 767px){
+  .skill{
+    width: 30vh;
+    height: 30vh;
+  }
+  .skill .img{
+    font-size: 15vh;
+  }
+}
+/* End of Skills Page */
+
+/* Work Page */
+
+.notready{
+  font-size: 10vh;
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+  font-family: "changa one";
+}
+
+
+@media (min-width: 100px) and (max-width: 767px){
+  .notready{
+    font-size: 5vh;
+    margin-top: 50%;
+  }
+}
+
+/* End of Work Page */
