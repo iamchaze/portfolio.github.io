@@ -150,3 +150,22 @@ function setSuccessFor(input) {
     const small = formControl.querySelector('small')
     small.classList.remove('active')
 }
+
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        console.log(entry);
+        if(entry.isIntersecting){
+            
+            entry.target.classList('a-show');
+        } else {
+            entry.target.classList('a-hidden');
+        }
+    })
+})
+
+const animateElements = document.querySelectorAll('customAnimation')
+animateElements.forEach((element) => {
+    observer.observe(element)
+})

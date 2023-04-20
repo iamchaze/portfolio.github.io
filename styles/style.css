@@ -169,9 +169,13 @@ p {
   padding: 0;
   margin: 0;
 }
+.hire-me-btn .button:hover{
+  color: blanchedalmond;
+}
 .hire-me-btn:hover {
   scale: 110%;
   padding-left: 1%;
+  
 
 }
 .hire-me-btn:active {
@@ -182,10 +186,7 @@ p {
 .hire-me-btn .content{
     opacity: 0;
 }
-.hire-me-btn:hover::before{
-    content: "😍  ";
-  
-}
+
 
 /* main content */
 
@@ -681,3 +682,15 @@ small.active{
 }
 
 /* End of Work Page */
+
+
+/* Animations for pages */
+
+.a-hidden{
+  opacity: 0;
+  transition: all 1s;
+}
+
+.a-show{
+  opacity: 1;
+}
