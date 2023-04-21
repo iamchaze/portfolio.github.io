@@ -1,9 +1,13 @@
+
+//-----------------------Generating Popups--------------------------------------------
+
 const contactForm = document.getElementById('contact-form') 
 const closeModalBtn = document.querySelectorAll('[popupCloseBtn]')
 const openModalBtn = document.querySelectorAll('[data-modal-target]')
 const submitButton = document.getElementById('submit-btn')
 const closeContactMeModalBtn = document.getElementById('contactMeModalcloseBtn')
 const overlay = document.getElementById('overlay')
+
 let contactFormInfo = []
 openModalBtn.forEach(button => {
     button.addEventListener('click', () => {
@@ -35,6 +39,8 @@ function closeModal(modal) {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
+
+//------------------------Contact Form Validation -------------------------------------------------------
 
 const firstName = document.getElementById('firstName')
 const email = document.getElementById('email')
@@ -152,36 +158,81 @@ function setSuccessFor(input) {
     small.classList.remove('active')
 }
 
-const animateElement = document.querySelectorAll('#animate-element')
+//-----------------------------Animations--------------------------------
 
-const animateRepeat = new IntersectionObserver((entries) => {
+// const animateOnceElement = document.querySelectorAll('#animate-once')
+// const animateRepeatElement = document.querySelectorAll('#animate-repeat')
+
+// const animateRepeat = new IntersectionObserver((entries) => {
         
-    entries.forEach((entry) =>{
-       console.log(entry);
+//     entries.forEach((entry) =>{
+//        console.log(entry);
+//         if(entry.isIntersecting){
+//             entry.target.classList.add('show-element');
+//         } else {
+//             entry.target.classList.remove('show-element');
+//         }
+//     })
+// })
+
+// const animateOnce = new IntersectionObserver((entries) => {
+        
+//     entries.forEach((entry) =>{
+//        console.log(entry);
+//         if(entry.isIntersecting){
+//             entry.target.classList.add('show-element');
+//         } 
+//     })
+// })
+
+// animateOnceElement.forEach(element => {
+    
+//     animateOnce.observe(element)
+// })
+
+
+// animateRepeatElement.forEach(element => {
+    
+//     animateRepeat.observe(element)
+// })
+
+const animateOnceElement = document.querySelectorAll('.animate-once')
+const ProfileImageElement = document.getElementById('profile-image')
+const socialLinks = document.querySelectorAll('.links')
+
+console.log(socialLinks);
+
+
+
+const animateOnce = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
         if(entry.isIntersecting){
-            entry.target.classList.add('show-element');
-        } else {
-            entry.target.classList.remove('show-element');
+            entry.target.classList.add('show')
         }
     })
 })
 
-const animateOnce = new IntersectionObserver((entries) => {
-        
+animateOnceElement.forEach((element) => {
+    animateOnce.observe(element)
+})
+
+const animateProfileImage = new IntersectionObserver((entries) => {
     entries.forEach((entry) =>{
-       console.log(entry);
         if(entry.isIntersecting){
-            entry.target.classList.add('show-element');
+            entry.target.classList.add('show-from-left')
         } 
     })
 })
 
+animateProfileImage.observe(ProfileImageElement)
 
 
-animateElement.forEach(element => {
-    
-    animateRepeat.observe(element)
+const animateSocialLinks = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show-from-bottom')
+        }
+    })
 })
 
-
-
+socialLinks.forEach((element) => animateSocialLinks.observe(element))

@@ -20,7 +20,7 @@
     <title>Portfolio | Viraj Kale.</title>
 </head>
 <body>
-    <nav class="nav-bar">
+    <nav class="nav-bar animate-once" >
         <button class="navbar-btn" onclick="window.location.href='./myskills.html'"> My Skills</button>
         <button class="navbar-btn" onclick="window.location.href='./work.html'">Work</button>
         <a class="hire-me-btn" href="mailto:virajkale9604@gmail.com?subject=&body=">
@@ -28,14 +28,14 @@
         </a>   
     </nav>
     <div class="main-content row customAnimation" id="animate-element">
-        <div class="col-md-5 image-section"> <img src="./assets/images/monkey-d-luffy-pfp-v0-0s865ngkc4t81.webp"
-                class="profile-image" alt=""> </div>
+        <div class="col-md-5 image-section" > <img src="./assets/images/monkey-d-luffy-pfp-v0-0s865ngkc4t81.webp"
+                class="profile-image" id="profile-image" alt=""> </div>
         <div class="col-md-5 intro-section">
             <h2 class="introduction">VIRAJ KALE</h2>
             <p class="subtitle">Web Developer</p>
         </div>
     </div>
-    <div class="social-links-section">
+    <div class="social-links-section" id="social-links">
         <a href="https://www.linkedin.com/in/viraj-kale-064baa184/" target="_blank" class="links"><i class="fa-brands social-icons fa-linkedin"></i>
             <!-- <span class="link-tooltip">Linkedin</span> -->
         </a>
@@ -51,7 +51,7 @@
         <a href="https://www.instagram.com/aboutviraj/" target="_blank" class="links"><i class="fa-brands  social-icons fa-instagram"></i>
             <!-- <span class="link-tooltip">Instagram</span> -->
         </a>
-        <div class="line"></div>
+        <div class="line animate-once"></div>
 
     </div>
     <div class="gif-section">
@@ -59,10 +59,10 @@
             <img src="./assets/images/tumblr_mm31jswkAI1rfjowdo1_640.gif"  class="luffy" alt="">
         </marquee>
     </div>
-    <div class="main-page-breakline"></div>
+    <div class="main-page-breakline animate-once"></div>
     <div class="myself-section">
-        <h1 class="about-heading">About Me</h1>
-        <p class="about-subtitle">`Learn. Create. Repeat.`<br>Building the best possible outcome of my abilities.</p>
+        <h1 class="about-heading animate-once">About Me</h1>
+        <p class="about-subtitle animate-once">`Learn. Create. Repeat.`<br>Building the best possible outcome of my abilities.</p>
         <div class="cards">
                 <div class="single-card" data-modal-target="#myselfPopup">
                     <div class="card-icon">
@@ -91,9 +91,9 @@
         </div>
     </div>
     <div class="contact-me-section">
-        <div class="contact-me-breakline"></div>
-        <h1 class="about-heading">Contact Me</h1>
-            <form  class="contact-form" id="contact-form">
+        <div class="contact-me-breakline animate-once"></div>
+        <h1 class="about-heading animate-once">Contact Me</h1>
+            <form  class="contact-form animate-once" id="contact-form">
                 <div id="error"></div>
                 <div class="form-attr">
                     <label class="form-label">First Name</label>
@@ -133,8 +133,8 @@
                 <input type="submit" id="submit-btn">
             </form>
     </div>
-    <div class="breakline"></div>
-    <p class="copyright">&#169; 2023 by Viraj Kale.</p>
+    <div class="breakline animate-once"></div>
+    <p class="copyright animate-once">&#169; 2023 by Viraj Kale.</p>
     <div id="overlay" class=""></div>
     <div class="customModal" id="myselfPopup">
         <div class="modalHeader">

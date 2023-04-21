@@ -30,6 +30,7 @@ p {
   margin: auto;
   margin-top: 8%;
   text-align: center;
+  opacity: 0;
 }
 .main-page-breakline{
     border-top: 0.5vh solid black;
@@ -38,6 +39,7 @@ p {
     margin: auto;
     margin-top: 0%;
     text-align: center;
+    opacity: 0;
 }
 .contact-me-breakline{
   border-top: 0.5vh solid black;
@@ -46,6 +48,7 @@ p {
   margin: auto;
   margin-top: 5%;
   text-align: center;
+  opacity: 0;
 }
 
 @keyframes bouncy-rotate {
@@ -81,6 +84,7 @@ p {
   right: 0;
   margin: auto;
   
+  
 }
 .social-icons {
   box-shadow: 0.5vh 0.5vh 0.1px rgba(0, 0, 0, 0.9);
@@ -99,12 +103,17 @@ p {
   font-size: 5vh;
   color: black;
   margin-top: 3vh;
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 0.1s;
+  transform: translateY(400%);
 }
 .links:hover {
   scale: 110%;
   box-shadow: none;
   animation: bouncy-rotate 0.3s;
   color: black;
+  transition: all 0.1s;
 }
 .social-icons:hover {
   background-color: gold;
@@ -123,6 +132,7 @@ p {
   display: inline-block;
   margin-left: 48%;
   margin-top: 20%;
+  opacity: 0;
 }
 /* Navigation Bar */
 
@@ -131,6 +141,9 @@ p {
   flex-direction: row;
   justify-content: space-around;
   padding: 0.5%;
+ 
+  opacity: 0;
+  
 }
 .navbar-btn {
   font-family: "carter one";
@@ -157,10 +170,7 @@ p {
   font-size: 3vh;
   padding: 0.5% 1%;
   box-shadow: 5px 5px 1px rgba(0, 0, 0, 1);
-  transition: scale 0.01s;
-  transition: color 0.05s;
-  transition: padding 0.01s;
-  transition: opacity 0.5s;
+  transition: all 0.1s;
   z-index: 1;
 }
 .hire-me-btn .button{
@@ -169,14 +179,10 @@ p {
   padding: 0;
   margin: 0;
 }
-.hire-me-btn .button:hover{
-  color: blanchedalmond;
-}
+
 .hire-me-btn:hover {
   scale: 110%;
   padding-left: 1%;
-  
-
 }
 .hire-me-btn:active {
   scale: 100%;
@@ -193,8 +199,9 @@ p {
 .main-content {
   margin: 6.5%;
   margin-bottom: 4%;
-  opacity: 0;
+  opacity: 1;
 }
+
 
 .profile-image {
   width: 80%;
@@ -205,10 +212,14 @@ p {
   object-fit: cover;
   object-position: center;
   box-shadow: 1.6vh 1.6vh 0 rgba(0, 0, 0, 1);
-  transition: transform 0.5s;
-  transition-delay: 0.2s;
+  transition: all 0.5s;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-50%);
+  
+  
 }
-.profile-image:hover{
+.profile-image:active{
     transform: rotateY(180deg);
     box-shadow: 1.6vh 1.6vh 20px rgba(0, 0, 0, 1);
     background-image: url("../assets/images/DSC_0600-01.jpeg");
@@ -250,6 +261,7 @@ p {
   margin-bottom: 2%;
   font-family: "carter one";
   font-size: 5vh;
+  opacity: 0;
 }
 .about-subtitle {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
@@ -258,6 +270,7 @@ p {
   width: 70%;
   text-align: center;
   margin: auto;
+  opacity: 0;
 }
 .cards {
   width: 60%;
@@ -340,9 +353,11 @@ p {
   border-radius: 1.2vh;
   transition: scale 0.1s;
   box-shadow: 1.6vh 1.6vh 0 rgba(0, 0, 0, 1);
+  opacity: 0;
 }
 .contact-form:hover {
-  scale: 105%;
+  scale: 103%;
+  
 }
 .form-attr {
   width: 49%;
@@ -411,6 +426,7 @@ p {
     font-size: 2vh;
     font-weight: bold;
     margin-bottom: 4%;
+    opacity: 0;
 }
 small{
   display: block;
@@ -556,6 +572,7 @@ small.active{
     position: relative;
     top: 30%;
     margin: auto;
+    
   
   }
   .line {
@@ -569,6 +586,7 @@ small.active{
   }
   .main-page-breakline, .contact-me-breakline{
     width: 95%;
+    opacity: 0;
   }
   .gif-section{
     width: 95%;
@@ -690,4 +708,34 @@ small.active{
 .show-element{
   opacity: 1;
   transition: all 1.5s;
+}
+.show{
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+.show-from-left{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
+}
+.show-from-bottom{
+  opacity: 1; 
+  filter: blur(0);
+  transform: translateY(0);
+  transition: transform 1s;
+  transition: opacity 1s;
+}
+
+.links:nth-child(1){
+  transition-delay: 400ms;
+}
+.links:nth-child(2){
+  transition-delay: 300ms;
+}
+.links:nth-child(3){
+  transition-delay: 200ms;
+}
+.links:nth-child(4){
+  transition-delay: 100ms;
 }
