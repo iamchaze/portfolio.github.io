@@ -46,6 +46,7 @@ const error = document.getElementById('error')
 const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
 const contactNumberRegex = /[0-9]/g
 const lastName = document.getElementById('lastName')
+
 contactForm.addEventListener('submit', e => {
     e.preventDefault()
     checkData()
@@ -151,21 +152,36 @@ function setSuccessFor(input) {
     small.classList.remove('active')
 }
 
+const animateElement = document.querySelectorAll('#animate-element')
 
-
-const observer = new IntersectionObserver((entries) => {
+const animateRepeat = new IntersectionObserver((entries) => {
+        
     entries.forEach((entry) =>{
-        console.log(entry);
+       console.log(entry);
         if(entry.isIntersecting){
-            
-            entry.target.classList('a-show');
+            entry.target.classList.add('show-element');
         } else {
-            entry.target.classList('a-hidden');
+            entry.target.classList.remove('show-element');
         }
     })
 })
 
-const animateElements = document.querySelectorAll('customAnimation')
-animateElements.forEach((element) => {
-    observer.observe(element)
+const animateOnce = new IntersectionObserver((entries) => {
+        
+    entries.forEach((entry) =>{
+       console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classList.add('show-element');
+        } 
+    })
 })
+
+
+
+animateElement.forEach(element => {
+    
+    animateRepeat.observe(element)
+})
+
+
+
