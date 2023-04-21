@@ -543,7 +543,7 @@ small.active{
   }
 }
 /* Long Mobile Size */
-/* @media (min-height: 680px) and (max-height: 950px) and (max-width:1000px) {
+@media (min-height: 680px) and (max-height: 950px) and (max-width:450px) {
   .contact-me-breakline{
     margin-top: 185%;
   }
@@ -551,7 +551,7 @@ small.active{
     font-size: 16vh;
     margin-top: 15%;
   }
-} */
+}
 /* Mobile Size */
 
 @media (min-width: 100px) and (max-width: 767px) and (min-height: 680px) and (max-height: 950px) {
@@ -727,7 +727,10 @@ small.active{
   transform: translateY(0);
   transition: all 0.7s
 }
-
+.hire-me-btn{
+  transition-delay: 200ms;
+  animation: bouncy-rotate 0.6s
+}
 .links:nth-child(1){
   transition-delay: 400ms;
 }
@@ -749,4 +752,3 @@ small.active{
 .single-card:nth-child(3){
   transition-delay: 100ms;
 }
-/* Animations for Mobile Size */
