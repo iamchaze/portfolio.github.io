@@ -3,8 +3,6 @@
 body {
   background-color: #7ce0e7;
   color: black;
-  
-  
 }
 
 /* Home Page */
@@ -88,7 +86,7 @@ p {
 }
 .social-icons {
   box-shadow: 0.5vh 0.5vh 0.1px rgba(0, 0, 0, 0.9);
-  border: 4px black solid;
+  border: 0.3vh black solid;
   border-radius: 1.5vh;
   padding: 0.5vh;
   background-color: #7ce0e7;
@@ -104,7 +102,7 @@ p {
   color: black;
   margin-top: 3vh;
   opacity: 0;
-  filter: blur(5px);
+  filter: blur(2px);
   transition: all 0.1s;
   transform: translateY(400%);
 }
@@ -163,13 +161,13 @@ p {
   position: fixed;
   right: 3vh;
   font-family: "carter one";
-  border: 0.5vh solid black;
+  border: 0.4vh solid black;
   border-radius: 1.8vh;
   background-color: gold;
   font-weight: bolder;
   font-size: 3vh;
   padding: 0.5% 1%;
-  box-shadow: 5px 5px 1px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   transition: all 0.1s;
   z-index: 1;
 }
@@ -287,11 +285,12 @@ p {
   background-color: rgb(226, 133, 99);
   margin: auto;
   margin-bottom: 10%;
-  border: 10px solid black;
+  border: 0.6vh solid black;
   border-radius: 3.6vh;
-  box-shadow: 1.6vh 1.6vh 0 rgba(0, 0, 0, 1);
-  transition: box-shadow 0.1s;
-  transition: 200ms ease-in-out;
+  box-shadow: 1vh 1vh 0 rgba(0, 0, 0, 1);
+  transform: translateX(-200%);
+  opacity: 0;
+  filter: blur(2px);
   
 }
 .single-card:hover{
@@ -304,7 +303,7 @@ p {
   box-shadow: none;
 }
 .aboutme-icon {
-  font-size: 18vh;
+  font-size: 15vh;
   float: center;
   margin-top: 10%;
 }
@@ -402,13 +401,13 @@ p {
 }
 #submit-btn{
     font-family: "carter one";
-    border: 0.5vh solid black;
+    border: 0.4vh solid black;
     border-radius: 2vh;
     background-color: gold;
     font-weight: bolder;
     font-size: 3vh;
     padding: 0.5% 1%;
-    box-shadow: 5px 5px 1px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
     transition:  0.1s;
 }
 #submit-btn:hover{
@@ -463,8 +462,8 @@ small.active{
 }
 .customModal{
   background-color: antiquewhite;
-  width: 700px;
-  max-width: 70%;
+  width: 650px;
+  max-width: 60%;
   border: 0.4vh solid black;
   position: absolute;
   top: 150%;
@@ -489,10 +488,12 @@ small.active{
   border-bottom: 0.5vh solid black;
   padding: 1% 5%;
   font-family: "carter one";
-  
+}
+.customModal .modalHeader h1{
+  font-size: 5vh;
 }
 .closeBtn, .contactMeModalcloseBtn{
-  font-size: 5vh;
+  font-size: 8vh;
 }
 .closeBtn:hover, .contactMeModalcloseBtn:hover{
   cursor: pointer;
@@ -542,7 +543,7 @@ small.active{
   }
 }
 /* Long Mobile Size */
-@media (min-height: 680px) and (max-height: 950px) and (max-width:1000px) {
+/* @media (min-height: 680px) and (max-height: 950px) and (max-width:1000px) {
   .contact-me-breakline{
     margin-top: 185%;
   }
@@ -550,10 +551,10 @@ small.active{
     font-size: 16vh;
     margin-top: 15%;
   }
-}
+} */
 /* Mobile Size */
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 100px) and (max-width: 767px) and (min-height: 680px) and (max-height: 950px) {
   .cards {
     grid-template-columns: 1fr;
   }
@@ -572,8 +573,6 @@ small.active{
     position: relative;
     top: 30%;
     margin: auto;
-    
-  
   }
   .line {
     visibility: collapse;
@@ -612,6 +611,9 @@ small.active{
   }
   .about-heading{
     margin: 7%
+  }
+  .single-card{
+    transform: translateX(-100%);
   }
 }
 
@@ -703,11 +705,11 @@ small.active{
 /* End of Work Page */
 
 
-/* Animations for pages */
+/* Animations for Desktop Size */
 
 .show-element{
   opacity: 1;
-  transition: all 1.5s;
+  transition: all 2s;
 }
 .show{
   opacity: 1;
@@ -723,8 +725,7 @@ small.active{
   opacity: 1; 
   filter: blur(0);
   transform: translateY(0);
-  transition: transform 1s;
-  transition: opacity 1s;
+  transition: all 0.7s
 }
 
 .links:nth-child(1){
@@ -739,3 +740,13 @@ small.active{
 .links:nth-child(4){
   transition-delay: 100ms;
 }
+.single-card:nth-child(1){
+  transition-delay: 300ms;
+}
+.single-card:nth-child(2){
+  transition-delay: 200ms;
+}
+.single-card:nth-child(3){
+  transition-delay: 100ms;
+}
+/* Animations for Mobile Size */

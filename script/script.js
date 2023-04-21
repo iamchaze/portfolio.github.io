@@ -160,47 +160,13 @@ function setSuccessFor(input) {
 
 //-----------------------------Animations--------------------------------
 
-// const animateOnceElement = document.querySelectorAll('#animate-once')
-// const animateRepeatElement = document.querySelectorAll('#animate-repeat')
 
-// const animateRepeat = new IntersectionObserver((entries) => {
-        
-//     entries.forEach((entry) =>{
-//        console.log(entry);
-//         if(entry.isIntersecting){
-//             entry.target.classList.add('show-element');
-//         } else {
-//             entry.target.classList.remove('show-element');
-//         }
-//     })
-// })
-
-// const animateOnce = new IntersectionObserver((entries) => {
-        
-//     entries.forEach((entry) =>{
-//        console.log(entry);
-//         if(entry.isIntersecting){
-//             entry.target.classList.add('show-element');
-//         } 
-//     })
-// })
-
-// animateOnceElement.forEach(element => {
-    
-//     animateOnce.observe(element)
-// })
-
-
-// animateRepeatElement.forEach(element => {
-    
-//     animateRepeat.observe(element)
-// })
 
 const animateOnceElement = document.querySelectorAll('.animate-once')
 const ProfileImageElement = document.getElementById('profile-image')
 const socialLinks = document.querySelectorAll('.links')
-
-console.log(socialLinks);
+const singleCard = document.querySelectorAll('.single-card')
+console.log(singleCard);
 
 
 
@@ -236,3 +202,17 @@ const animateSocialLinks = new IntersectionObserver((entries) => {
 })
 
 socialLinks.forEach((element) => animateSocialLinks.observe(element))
+
+const animateCards = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show-from-left')
+        } else {
+            entry.target.classList.remove('show-from-left')
+        }
+    })
+})
+
+singleCard.forEach((element) =>{
+    animateCards.observe(element)
+})
