@@ -93,7 +93,7 @@ p {
 .links:hover {
   scale: 110%;
   box-shadow: none;
-  animation: bouncy-rotate 0.3s;
+  animation: bouncy-rotate 0.3s ease-in-out;
   color: black;
   transition: all 0.1s;
 }
@@ -218,7 +218,7 @@ p {
   font-weight: bolder;
   font-size: 15vh;
   color: black;
-  animation: from-right 0.9s;
+  animation: from-right 0.9s cubic-bezier(0, 0, 0.02, 1.51);
 }
 .subtitle {
   margin-top: 5%;
